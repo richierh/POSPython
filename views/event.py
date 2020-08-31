@@ -9,6 +9,11 @@ class OpenWindows(MyFrame1):
         super().__init__(parent,*args,**kwds)
 
         self.Bind(wx.EVT_CLOSE, self.OnCloseWindow)
+        # self.m_htmlWin1.LoadPage("gridview.html")
+        self.m_htmlWin1.SetPage("htmlbody" \
+                    "h1Error/h1" \
+                    "Some error occurred :-H)" \
+                    "/body/hmtl")
         # event for click button
         self.number = Number(self)
 
@@ -31,6 +36,8 @@ class OpenWindows(MyFrame1):
         if keycode == ord('0'):
             print(keycode)
             self.number = 0
+    
+    
 
 class RunApp(wx.App):
     def OnInit(self):

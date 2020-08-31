@@ -12,7 +12,7 @@
 				<orient>wxVERTICAL</orient>
 				<object class="sizeritem">
 					<option>0</option>
-					<flag>wxALIGN_RIGHT</flag>
+					<flag>wxALIGN_CENTER_HORIZONTAL</flag>
 					<border>5</border>
 					<object class="wxFlexGridSizer">
 						<rows>0</rows>
@@ -79,7 +79,7 @@
 									</object>
 								</object>
 								<object class="sizeritem">
-									<option>0</option>
+									<option>3</option>
 									<flag>wxEXPAND</flag>
 									<border>5</border>
 									<object class="wxGridSizer">
@@ -88,8 +88,8 @@
 										<vgap>0</vgap>
 										<hgap>0</hgap>
 										<object class="sizeritem">
-											<option>0</option>
-											<flag>wxALL</flag>
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxButton" name="m_button3">
 												<label>MyButton</label>
@@ -100,8 +100,8 @@
 											</object>
 										</object>
 										<object class="sizeritem">
-											<option>0</option>
-											<flag>wxALL</flag>
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxButton" name="m_button4">
 												<label>MyButton</label>
@@ -112,8 +112,8 @@
 											</object>
 										</object>
 										<object class="sizeritem">
-											<option>0</option>
-											<flag>wxALL</flag>
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxButton" name="m_button5">
 												<label>MyButton</label>
@@ -124,8 +124,8 @@
 											</object>
 										</object>
 										<object class="sizeritem">
-											<option>0</option>
-											<flag>wxALL</flag>
+											<option>1</option>
+											<flag>wxALL|wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxButton" name="m_button6">
 												<label>MyButton</label>
@@ -159,7 +159,7 @@
 										<orient>wxHORIZONTAL</orient>
 										<object class="sizeritem">
 											<option>3</option>
-											<flag>wxEXPAND</flag>
+											<flag>wxALIGN_BOTTOM|wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxGridSizer">
 												<rows>4</rows>
@@ -430,13 +430,12 @@
 												<vgap>0</vgap>
 												<hgap>0</hgap>
 												<growablecols>0</growablecols>
-												<growablerows>0,1,2,3,4</growablerows>
+												<growablerows>0,1,2,3</growablerows>
 												<object class="sizeritem">
-													<option>1</option>
+													<option>3</option>
 													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button19">
-														<size>75,75</size>
 														<font>
 															<size>24</size>
 															<family>swiss</family>
@@ -457,7 +456,6 @@
 													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button21">
-														<size>75,75</size>
 														<font>
 															<size>24</size>
 															<family>swiss</family>
@@ -478,7 +476,6 @@
 													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button22">
-														<size>75,75</size>
 														<font>
 															<size>24</size>
 															<family>swiss</family>
@@ -499,7 +496,6 @@
 													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button20">
-														<size>75,75</size>
 														<font>
 															<size>24</size>
 															<family>swiss</family>
@@ -558,11 +554,23 @@
 									</object>
 								</object>
 								<object class="sizeritem">
-									<option>3</option>
+									<option>1</option>
 									<flag>wxALL|wxEXPAND</flag>
 									<border>5</border>
-									<object class="wxListCtrl" name="m_listCtrl1">
-										<style>wxLC_ICON</style>
+									<object class="unknown" name="m_dataViewCtrl1" />
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="unknown" name="m_dataViewListCtrl2" />
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<object class="wxHtmlWindow" name="m_htmlWin1">
+										<style>wxHW_SCROLLBAR_AUTO</style>
 									</object>
 								</object>
 							</object>

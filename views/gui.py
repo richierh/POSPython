@@ -11,6 +11,7 @@ import wx
 import wx.xrc
 import wx.dataview
 from wx.lib.intctrl import IntCtrl
+import wx.html
 
 ID_KELUAR = 1000
 
@@ -41,7 +42,7 @@ class MyFrame1 ( wx.Frame ):
 		fgSizer1.Add( self.m_button2, 0, wx.ALL, 5 )
 
 
-		bSizer3.Add( fgSizer1, 0, wx.ALIGN_RIGHT, 5 )
+		bSizer3.Add( fgSizer1, 0, wx.ALIGN_CENTER_HORIZONTAL, 5 )
 
 		bSizer4 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -56,7 +57,7 @@ class MyFrame1 ( wx.Frame ):
 		fgSizer3.SetFlexibleDirection( wx.BOTH )
 		fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-		self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_dataViewListCtrl1 = wx.dataview.DataViewListCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.Size( 200,300 ), 0 )
 		self.m_dataViewListColumn1 = self.m_dataViewListCtrl1.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
 		self.m_dataViewListColumn2 = self.m_dataViewListCtrl1.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
 		self.m_dataViewListColumn3 = self.m_dataViewListCtrl1.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
@@ -69,19 +70,19 @@ class MyFrame1 ( wx.Frame ):
 		gSizer1 = wx.GridSizer( 0, 2, 0, 0 )
 
 		self.m_button3 = wx.Button( self.m_panel1, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer1.Add( self.m_button3, 0, wx.ALL, 5 )
+		gSizer1.Add( self.m_button3, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_button4 = wx.Button( self.m_panel1, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer1.Add( self.m_button4, 0, wx.ALL, 5 )
+		gSizer1.Add( self.m_button4, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_button5 = wx.Button( self.m_panel1, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer1.Add( self.m_button5, 0, wx.ALL, 5 )
+		gSizer1.Add( self.m_button5, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_button6 = wx.Button( self.m_panel1, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer1.Add( self.m_button6, 0, wx.ALL, 5 )
+		gSizer1.Add( self.m_button6, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-		fgSizer3.Add( gSizer1, 0, wx.EXPAND, 5 )
+		fgSizer3.Add( gSizer1, 3, wx.EXPAND, 5 )
 
 		self.m_staticline1 = wx.StaticLine( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
 		fgSizer3.Add( self.m_staticline1, 0, wx.EXPAND |wx.ALL, 5 )
@@ -156,45 +157,44 @@ class MyFrame1 ( wx.Frame ):
 		gSizer2.Add( self.m_button18, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-		bSizer41.Add( gSizer2, 3, wx.EXPAND, 5 )
+		bSizer41.Add( gSizer2, 3, wx.ALIGN_BOTTOM|wx.EXPAND, 5 )
 
-		fgSizer31 = wx.FlexGridSizer( 5, 0, 0, 0 )
-		fgSizer31.AddGrowableCol( 0 )
-		fgSizer31.AddGrowableRow( 0 )
-		fgSizer31.AddGrowableRow( 1 )
-		fgSizer31.AddGrowableRow( 2 )
-		fgSizer31.AddGrowableRow( 3 )
-		fgSizer31.AddGrowableRow( 4 )
-		fgSizer31.SetFlexibleDirection( wx.BOTH )
-		fgSizer31.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+		fgSizer4 = wx.FlexGridSizer( 5, 0, 0, 0 )
+		fgSizer4.AddGrowableCol( 0 )
+		fgSizer4.AddGrowableRow( 0 )
+		fgSizer4.AddGrowableRow( 1 )
+		fgSizer4.AddGrowableRow( 2 )
+		fgSizer4.AddGrowableRow( 3 )
+		fgSizer4.SetFlexibleDirection( wx.BOTH )
+		fgSizer4.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-		self.m_button19 = wx.Button( self.m_panel1, wx.ID_ANY, u"x", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button19 = wx.Button( self.m_panel1, wx.ID_ANY, u"x", wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
 		self.m_button19.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		fgSizer31.Add( self.m_button19, 1, wx.ALL|wx.EXPAND, 5 )
+		fgSizer4.Add( self.m_button19, 3, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button21 = wx.Button( self.m_panel1, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button21 = wx.Button( self.m_panel1, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
 		self.m_button21.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		fgSizer31.Add( self.m_button21, 1, wx.ALL|wx.EXPAND, 5 )
+		fgSizer4.Add( self.m_button21, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button22 = wx.Button( self.m_panel1, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button22 = wx.Button( self.m_panel1, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
 		self.m_button22.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		fgSizer31.Add( self.m_button22, 1, wx.ALL|wx.EXPAND, 5 )
+		fgSizer4.Add( self.m_button22, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button20 = wx.Button( self.m_panel1, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button20 = wx.Button( self.m_panel1, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
 		self.m_button20.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		fgSizer31.Add( self.m_button20, 1, wx.ALL|wx.EXPAND, 5 )
+		fgSizer4.Add( self.m_button20, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_button23 = wx.Button( self.m_panel1, wx.ID_ANY, u"=", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
 		self.m_button23.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		fgSizer31.Add( self.m_button23, 1, wx.ALL|wx.EXPAND, 5 )
+		fgSizer4.Add( self.m_button23, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-		bSizer41.Add( fgSizer31, 1, wx.EXPAND, 5 )
+		bSizer41.Add( fgSizer4, 1, wx.EXPAND, 5 )
 
 
 		fgSizer3.Add( bSizer41, 1, wx.EXPAND, 5 )
@@ -209,8 +209,20 @@ class MyFrame1 ( wx.Frame ):
 		self.m_searchCtrl1.ShowCancelButton( False )
 		bSizer5.Add( self.m_searchCtrl1, 0, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_listCtrl1 = wx.ListCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LC_ICON )
-		bSizer5.Add( self.m_listCtrl1, 3, wx.ALL|wx.EXPAND, 5 )
+		self.m_dataViewCtrl1 = wx.dataview.DataViewCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_dataViewColumn1 = self.m_dataViewCtrl1.AppendTextColumn( u"Name", 0, wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
+		self.m_dataViewColumn2 = self.m_dataViewCtrl1.AppendTextColumn( u"Name", 0, wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
+		self.m_dataViewColumn3 = self.m_dataViewCtrl1.AppendTextColumn( u"Name", 0, wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
+		bSizer5.Add( self.m_dataViewCtrl1, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_dataViewListCtrl2 = wx.dataview.DataViewListCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_dataViewListColumn5 = self.m_dataViewListCtrl2.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
+		self.m_dataViewListColumn6 = self.m_dataViewListCtrl2.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
+		self.m_dataViewListColumn7 = self.m_dataViewListCtrl2.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
+		bSizer5.Add( self.m_dataViewListCtrl2, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_htmlWin1 = wx.html.HtmlWindow( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.html.HW_SCROLLBAR_AUTO )
+		bSizer5.Add( self.m_htmlWin1, 1, wx.ALL|wx.EXPAND, 5 )
 
 
 		bSizer4.Add( bSizer5, 5, wx.EXPAND, 5 )
