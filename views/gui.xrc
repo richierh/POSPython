@@ -63,7 +63,7 @@
 								<vgap>0</vgap>
 								<hgap>0</hgap>
 								<growablecols>0</growablecols>
-								<growablerows>0</growablerows>
+								<growablerows>0,1,2,3,4,5</growablerows>
 								<object class="sizeritem">
 									<option>1</option>
 									<flag>wxALL|wxEXPAND</flag>
@@ -158,7 +158,7 @@
 									<object class="wxBoxSizer">
 										<orient>wxHORIZONTAL</orient>
 										<object class="sizeritem">
-											<option>1</option>
+											<option>3</option>
 											<flag>wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxGridSizer">
@@ -167,8 +167,8 @@
 												<vgap>0</vgap>
 												<hgap>0</hgap>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button7">
 														<size>75,75</size>
@@ -188,11 +188,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button8">
 														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>8</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -201,11 +209,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button9">
 														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>9</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -214,10 +230,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button10">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>4</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -226,10 +251,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button11">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>5</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -238,10 +272,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button12">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>6</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -250,10 +293,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button13">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>1</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -262,10 +314,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button14">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>2</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -274,10 +335,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button15">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>3</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -286,10 +356,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button16">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>00</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -298,10 +377,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button17">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>0</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -310,10 +398,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button18">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>000</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -324,21 +421,30 @@
 											</object>
 										</object>
 										<object class="sizeritem">
-											<option>0</option>
-											<flag></flag>
+											<option>1</option>
+											<flag>wxEXPAND</flag>
 											<border>5</border>
 											<object class="wxFlexGridSizer">
 												<rows>5</rows>
 												<cols>0</cols>
 												<vgap>0</vgap>
 												<hgap>0</hgap>
-												<growablecols></growablecols>
-												<growablerows></growablerows>
+												<growablecols>0</growablecols>
+												<growablerows>0,1,2,3,4</growablerows>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button19">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>x</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -347,10 +453,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button21">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>+</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -359,10 +474,19 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button22">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>-</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
@@ -371,11 +495,41 @@
 													</object>
 												</object>
 												<object class="sizeritem">
-													<option>0</option>
-													<flag>wxALL</flag>
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
 													<border>5</border>
 													<object class="wxButton" name="m_button20">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
 														<label>/</label>
+														<default>0</default>
+														<auth_needed>0</auth_needed>
+														<markup>0</markup>
+														<bitmap />
+													</object>
+												</object>
+												<object class="sizeritem">
+													<option>1</option>
+													<flag>wxALL|wxEXPAND</flag>
+													<border>5</border>
+													<object class="wxButton" name="m_button23">
+														<size>75,75</size>
+														<font>
+															<size>24</size>
+															<family>swiss</family>
+															<style>normal</style>
+															<weight>normal</weight>
+															<underlined>0</underlined>
+															<face>Sans</face>
+														</font>
+														<label>=</label>
 														<default>0</default>
 														<auth_needed>0</auth_needed>
 														<markup>0</markup>

@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.pythonPath": "/home/pmc/anaconda3/envs/odoo/bin/python"
+	}
 }

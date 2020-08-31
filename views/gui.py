@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ###########################################################################
-## Python code generated with wxFormBuilder (version 3.9.0 Aug 27 2020)
+## Python code generated with wxFormBuilder (version 3.9.0 Jul 26 2020)
 ## http://www.wxformbuilder.org/
 ##
 ## PLEASE DO *NOT* EDIT THIS FILE!
@@ -48,6 +48,11 @@ class MyFrame1 ( wx.Frame ):
 		fgSizer3 = wx.FlexGridSizer( 6, 1, 0, 0 )
 		fgSizer3.AddGrowableCol( 0 )
 		fgSizer3.AddGrowableRow( 0 )
+		fgSizer3.AddGrowableRow( 1 )
+		fgSizer3.AddGrowableRow( 2 )
+		fgSizer3.AddGrowableRow( 3 )
+		fgSizer3.AddGrowableRow( 4 )
+		fgSizer3.AddGrowableRow( 5 )
 		fgSizer3.SetFlexibleDirection( wx.BOTH )
 		fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
@@ -82,6 +87,8 @@ class MyFrame1 ( wx.Frame ):
 		fgSizer3.Add( self.m_staticline1, 0, wx.EXPAND |wx.ALL, 5 )
 
 		self.m_intctrl=IntCtrl(self.m_panel1, wx.ID_ANY,0 )
+		self.m_intctrl.SetFont( wx.Font( 26, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
 		fgSizer3.Add( self.m_intctrl, 1, wx.ALL|wx.EXPAND, 5 )
 
 		bSizer41 = wx.BoxSizer( wx.HORIZONTAL )
@@ -91,62 +98,103 @@ class MyFrame1 ( wx.Frame ):
 		self.m_button7 = wx.Button( self.m_panel1, wx.ID_ANY, u"7", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
 		self.m_button7.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		gSizer2.Add( self.m_button7, 0, wx.ALL, 5 )
+		gSizer2.Add( self.m_button7, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_button8 = wx.Button( self.m_panel1, wx.ID_ANY, u"8", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
-		gSizer2.Add( self.m_button8, 0, wx.ALL, 5 )
+		self.m_button8.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		gSizer2.Add( self.m_button8, 1, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_button9 = wx.Button( self.m_panel1, wx.ID_ANY, u"9", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
-		gSizer2.Add( self.m_button9, 0, wx.ALL, 5 )
+		self.m_button9.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button10 = wx.Button( self.m_panel1, wx.ID_ANY, u"4", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button10, 0, wx.ALL, 5 )
+		gSizer2.Add( self.m_button9, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button11 = wx.Button( self.m_panel1, wx.ID_ANY, u"5", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button11, 0, wx.ALL, 5 )
+		self.m_button10 = wx.Button( self.m_panel1, wx.ID_ANY, u"4", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button10.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button12 = wx.Button( self.m_panel1, wx.ID_ANY, u"6", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button12, 0, wx.ALL, 5 )
+		gSizer2.Add( self.m_button10, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button13 = wx.Button( self.m_panel1, wx.ID_ANY, u"1", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button13, 0, wx.ALL, 5 )
+		self.m_button11 = wx.Button( self.m_panel1, wx.ID_ANY, u"5", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button11.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button14 = wx.Button( self.m_panel1, wx.ID_ANY, u"2", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button14, 0, wx.ALL, 5 )
+		gSizer2.Add( self.m_button11, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button15 = wx.Button( self.m_panel1, wx.ID_ANY, u"3", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button15, 0, wx.ALL, 5 )
+		self.m_button12 = wx.Button( self.m_panel1, wx.ID_ANY, u"6", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button12.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button16 = wx.Button( self.m_panel1, wx.ID_ANY, u"00", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button16, 0, wx.ALL, 5 )
+		gSizer2.Add( self.m_button12, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button17 = wx.Button( self.m_panel1, wx.ID_ANY, u"0", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button17, 0, wx.ALL, 5 )
+		self.m_button13 = wx.Button( self.m_panel1, wx.ID_ANY, u"1", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button13.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button18 = wx.Button( self.m_panel1, wx.ID_ANY, u"000", wx.DefaultPosition, wx.DefaultSize, 0 )
-		gSizer2.Add( self.m_button18, 0, wx.ALL, 5 )
+		gSizer2.Add( self.m_button13, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button14 = wx.Button( self.m_panel1, wx.ID_ANY, u"2", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button14.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		gSizer2.Add( self.m_button14, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button15 = wx.Button( self.m_panel1, wx.ID_ANY, u"3", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button15.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		gSizer2.Add( self.m_button15, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button16 = wx.Button( self.m_panel1, wx.ID_ANY, u"00", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button16.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		gSizer2.Add( self.m_button16, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button17 = wx.Button( self.m_panel1, wx.ID_ANY, u"0", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button17.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		gSizer2.Add( self.m_button17, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button18 = wx.Button( self.m_panel1, wx.ID_ANY, u"000", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button18.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		gSizer2.Add( self.m_button18, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-		bSizer41.Add( gSizer2, 1, wx.EXPAND, 5 )
+		bSizer41.Add( gSizer2, 3, wx.EXPAND, 5 )
 
 		fgSizer31 = wx.FlexGridSizer( 5, 0, 0, 0 )
+		fgSizer31.AddGrowableCol( 0 )
+		fgSizer31.AddGrowableRow( 0 )
+		fgSizer31.AddGrowableRow( 1 )
+		fgSizer31.AddGrowableRow( 2 )
+		fgSizer31.AddGrowableRow( 3 )
+		fgSizer31.AddGrowableRow( 4 )
 		fgSizer31.SetFlexibleDirection( wx.BOTH )
 		fgSizer31.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-		self.m_button19 = wx.Button( self.m_panel1, wx.ID_ANY, u"x", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer31.Add( self.m_button19, 0, wx.ALL, 5 )
+		self.m_button19 = wx.Button( self.m_panel1, wx.ID_ANY, u"x", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button19.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button21 = wx.Button( self.m_panel1, wx.ID_ANY, u"+", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer31.Add( self.m_button21, 0, wx.ALL, 5 )
+		fgSizer31.Add( self.m_button19, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_button22 = wx.Button( self.m_panel1, wx.ID_ANY, u"-", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer31.Add( self.m_button22, 0, wx.ALL, 5 )
+		self.m_button21 = wx.Button( self.m_panel1, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button21.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
 
-		self.m_button20 = wx.Button( self.m_panel1, wx.ID_ANY, u"/", wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer31.Add( self.m_button20, 0, wx.ALL, 5 )
+		fgSizer31.Add( self.m_button21, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button22 = wx.Button( self.m_panel1, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button22.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		fgSizer31.Add( self.m_button22, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button20 = wx.Button( self.m_panel1, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button20.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		fgSizer31.Add( self.m_button20, 1, wx.ALL|wx.EXPAND, 5 )
+
+		self.m_button23 = wx.Button( self.m_panel1, wx.ID_ANY, u"=", wx.DefaultPosition, wx.Size( 75,75 ), 0 )
+		self.m_button23.SetFont( wx.Font( 24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, "Sans" ) )
+
+		fgSizer31.Add( self.m_button23, 1, wx.ALL|wx.EXPAND, 5 )
 
 
-		bSizer41.Add( fgSizer31, 0, 0, 5 )
+		bSizer41.Add( fgSizer31, 1, wx.EXPAND, 5 )
 
 
 		fgSizer3.Add( bSizer41, 1, wx.EXPAND, 5 )
