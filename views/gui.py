@@ -255,6 +255,7 @@ class MyFrame1 ( wx.Frame ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.Bind( wx.EVT_CLOSE, self.OnCloseMainWindow )
 		self.m_button17.Bind( wx.EVT_KEY_DOWN, self.tekan0 )
 		self.Bind( wx.EVT_MENU, self.Keluar, id = self.keluar.GetId() )
 
@@ -263,10 +264,74 @@ class MyFrame1 ( wx.Frame ):
 
 
 	# Virtual event handlers, overide them in your derived class
+	def OnCloseMainWindow( self, event ):
+		event.Skip()
+
 	def tekan0( self, event ):
 		event.Skip()
 
 	def Keluar( self, event ):
+		event.Skip()
+
+
+###########################################################################
+## Class MyDialog1
+###########################################################################
+
+class MyDialog1 ( wx.Dialog ):
+
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_DIALOG_STYLE )
+
+		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+
+		bSizer6 = wx.BoxSizer( wx.VERTICAL )
+
+		self.m_scrolledWindow2 = wx.ScrolledWindow( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.HSCROLL|wx.VSCROLL )
+		self.m_scrolledWindow2.SetScrollRate( 5, 5 )
+		bSizer7 = wx.BoxSizer( wx.VERTICAL )
+
+		self.m_button28 = wx.Button( self.m_scrolledWindow2, wx.ID_ANY, u"Yes", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer7.Add( self.m_button28, 0, wx.ALL, 5 )
+
+		self.m_button29 = wx.Button( self.m_scrolledWindow2, wx.ID_ANY, u"No", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer7.Add( self.m_button29, 0, wx.ALL, 5 )
+
+		self.m_button30 = wx.Button( self.m_scrolledWindow2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer7.Add( self.m_button30, 0, wx.ALL, 5 )
+
+		self.m_button31 = wx.Button( self.m_scrolledWindow2, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer7.Add( self.m_button31, 0, wx.ALL, 5 )
+
+
+		self.m_scrolledWindow2.SetSizer( bSizer7 )
+		self.m_scrolledWindow2.Layout()
+		bSizer7.Fit( self.m_scrolledWindow2 )
+		bSizer6.Add( self.m_scrolledWindow2, 1, wx.EXPAND |wx.ALL, 5 )
+
+
+		self.SetSizer( bSizer6 )
+		self.Layout()
+
+		self.Centre( wx.BOTH )
+
+		# Connect Events
+		self.Bind( wx.EVT_CLOSE, self.CloseDialogProcess )
+		self.m_button28.Bind( wx.EVT_BUTTON, self.KlikYes )
+		self.m_button29.Bind( wx.EVT_BUTTON, self.KlikNo )
+
+	def __del__( self ):
+		pass
+
+
+	# Virtual event handlers, overide them in your derived class
+	def CloseDialogProcess( self, event ):
+		event.Skip()
+
+	def KlikYes( self, event ):
+		event.Skip()
+
+	def KlikNo( self, event ):
 		event.Skip()
 
 

@@ -1,4 +1,4 @@
-from views.gui import MyFrame1
+from views.gui import MyFrame1,MyDialog1
 import wx
 from controller.number_logic import Number
 
@@ -29,15 +29,39 @@ class OpenWindows(MyFrame1):
         self.Destroy()  # you may also do:  event.Skip()
                         # since the default event handler does call Destroy(), too
 
-
-
     def tekan0(self,event):
         keycode = event.GetKeyCode()
         if keycode == ord('0'):
             print(keycode)
             self.number = 0
     
+    def Keluar(self,event):
+        self.CloseDialog  = OpenDialog(self)
+        self.CloseDialog.Show()
     
+    
+    def OnCloseMainWindow(self,event):
+        return
+
+
+class OpenDialog(MyDialog1):
+
+    def __init__(self,parent):
+        super().__init__(parent)
+        self.parent = parent
+ 
+    def KlikYes(self,event):
+        print ("true")
+        self.parent.Close()
+        self.Close()
+    
+    def KlikNo(self,event):
+        print ("false")
+ 
+    def CloseDialogProcess(self, event):
+        
+
+        return True
 
 class RunApp(wx.App):
     def OnInit(self):
