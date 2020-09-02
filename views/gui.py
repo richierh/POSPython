@@ -11,7 +11,7 @@ import wx
 import wx.xrc
 import wx.dataview
 from wx.lib.intctrl import IntCtrl
-import wx.html
+import wx.lib.agw.thumbnailctrl as TC
 
 ID_KELUAR = 1000
 
@@ -207,22 +207,18 @@ class MyFrame1 ( wx.Frame ):
 		self.m_searchCtrl1 = wx.SearchCtrl( self.m_panel1, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( -1,50 ), 0 )
 		self.m_searchCtrl1.ShowSearchButton( True )
 		self.m_searchCtrl1.ShowCancelButton( False )
-		bSizer5.Add( self.m_searchCtrl1, 0, wx.ALL|wx.EXPAND, 5 )
+		self.m_searchCtrl1.SetFont( wx.Font( 18, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
 
-		self.m_dataViewCtrl1 = wx.dataview.DataViewCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_dataViewColumn1 = self.m_dataViewCtrl1.AppendTextColumn( u"Name", 0, wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
-		self.m_dataViewColumn2 = self.m_dataViewCtrl1.AppendTextColumn( u"Name", 0, wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
-		self.m_dataViewColumn3 = self.m_dataViewCtrl1.AppendTextColumn( u"Name", 0, wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
-		bSizer5.Add( self.m_dataViewCtrl1, 1, wx.ALL|wx.EXPAND, 5 )
+		bSizer5.Add( self.m_searchCtrl1, 0, wx.ALL|wx.EXPAND, 5 )
 
 		self.m_dataViewListCtrl2 = wx.dataview.DataViewListCtrl( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_dataViewListColumn5 = self.m_dataViewListCtrl2.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
 		self.m_dataViewListColumn6 = self.m_dataViewListCtrl2.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
 		self.m_dataViewListColumn7 = self.m_dataViewListCtrl2.AppendTextColumn( u"Name", wx.dataview.DATAVIEW_CELL_INERT, -1, wx.ALIGN_LEFT, wx.dataview.DATAVIEW_COL_RESIZABLE )
-		bSizer5.Add( self.m_dataViewListCtrl2, 1, wx.ALL|wx.EXPAND, 5 )
+		bSizer5.Add( self.m_dataViewListCtrl2, 0, wx.ALL|wx.EXPAND, 5 )
 
-		self.m_htmlWin1 = wx.html.HtmlWindow( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.html.HW_SCROLLBAR_AUTO )
-		bSizer5.Add( self.m_htmlWin1, 1, wx.ALL|wx.EXPAND, 5 )
+		self.thumbnail = TC.ThumbnailCtrl(self.m_panel1,imagehandler=TC.NativeImageHandler)
+		bSizer5.Add( self.thumbnail, 5, wx.ALL|wx.EXPAND, 5 )
 
 
 		bSizer4.Add( bSizer5, 5, wx.EXPAND, 5 )

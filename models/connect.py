@@ -4,8 +4,8 @@ import xmlrpc
 # example
 
 # url = "http://192.168.100.200:8069"
-url = "http://localhost:8069"
-db = "Dataku"
+url = "http://192.168.100.200:8069"
+db = "TBKamojang"
 username = "richie130283@gmail.com"
 password = "admin"    
 # password = <insert password for your admin user (default: admin)>
@@ -26,3 +26,5 @@ a = models.execute_kw(db, uid, password,'res.partner', 'search',[[['is_company',
 print (a)
 b = models.execute_kw(db, uid, password, 'product.product', 'search_read', [[]], {'fields': ['description', 'name','list_price'], 'context' :{'lang': "es_ES"}})
 print (b)
+c = models.execute_kw(db,uid,password,'product.template', 'search_read',[[]],{'fields':['image_1920']})
+print (c)

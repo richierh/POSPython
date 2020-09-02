@@ -1,6 +1,7 @@
 from views.gui import MyFrame1,MyDialog1
 import wx
 from controller.number_logic import Number
+from controller.frame_prop import MainWindow
 
 class OpenWindows(MyFrame1):
 
@@ -10,12 +11,13 @@ class OpenWindows(MyFrame1):
 
         self.Bind(wx.EVT_CLOSE, self.OnCloseWindow)
         # self.m_htmlWin1.LoadPage("gridview.html")
-        self.m_htmlWin1.SetPage("htmlbody" \
-                    "h1Error/h1" \
-                    "Some error occurred :-H)" \
-                    "/body/hmtl")
+        # self.m_htmlWin1.SetPage("htmlbody" \
+        #             "h1Error/h1" \
+        #             "Some error occurred :-H)" \
+        #             "/body/hmtl")
         # event for click button
         self.number = Number(self)
+        self.win_prop = MainWindow(self)
 
     def OnCloseWindow(self,event):
 
